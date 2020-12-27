@@ -23,16 +23,6 @@
           </div>
         </el-form-item>
 
-        <el-form-item class="input-prepend restyle no-radius" prop="code" :rules="[{ required: true, message: '请输入验证码', trigger: 'blur' }]">
-          <div style="width: 100%;display: block;float: left;position: relative">
-            <el-input type="text" placeholder="验证码" v-model="params.code"/>
-            <i class="iconfont icon-phone"/>
-          </div>
-          <div class="btn" style="position:absolute;right: 0;top: 6px;width: 40%;">
-            <a href="javascript:" type="button" @click="getCodeFun()" :value="codeTest" style="border: none;background-color: none">{{codeTest}}</a>
-          </div>
-        </el-form-item>
-
         <el-form-item class="input-prepend" prop="password" :rules="[{ required: true, message: '请输入密码', trigger: 'blur' }]">
           <div>
             <el-input type="password" placeholder="设置密码" v-model="params.password"/>
@@ -68,23 +58,44 @@
 import '~/assets/css/sign.css'
 import '~/assets/css/iconfont.css'
 
-// import registerApi from '@/api/register'
+import registerApi from '@/api/register'
 
 export default {
   layout: 'sign',
   data() {
     return {
-      params: {
+      params: { //封装注册输入数据
         mobile: '',
-        code: '',
+        code: '',  //验证码
         nickname: '',
         password: ''
-      },
-      sending: true,      //是否发送验证码
-      second: 60,        //倒计时间
-      codeTest: '获取验证码'
+      }
     }
   },
-  methods: {}
+  methods: {
+
+    //注册提交的方法
+    submitRegister() {
+      registerApi.registerUser(this.params)
+        .then(response => {
+          //提示注册成功
+          this.$message({
+            type: 'success',
+            message: "注册成功"
+          })
+          //跳转登录页面
+          this.$router.push({path:'/login'})
+
+        })
+    },
+
+    checkPhone (rule, value, callback) {
+      //debugger
+      if (!(/^1[34578]\d{9}$/.test(value))) {
+        return callback(new Error('手机号码格式不正确'))
+      }
+      return callback()
+    }
+  }
 }
 </script>

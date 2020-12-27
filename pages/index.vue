@@ -115,7 +115,7 @@
 </template>
 
 <script>
-import banner from "../api/banner"
+import indexApi from "../api/index"
 export default {
   data () {
     return {
@@ -141,7 +141,7 @@ export default {
   },
   methods: {
     getInfo() {
-      banner.getIndexData()
+      indexApi.getIndexData()
         .then(response => {
           this.courseList = response.data.data.courseList
           this.photographerList = response.data.data.photographerList
@@ -149,7 +149,7 @@ export default {
     },
     // 查询banner数据
     getBannerList() {
-      banner.getBannerList()
+      indexApi.getBannerList()
         .then(response => {
           this.bannerList = response.data.data.list
         })
