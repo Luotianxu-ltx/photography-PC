@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="用户登录和注册前端静态页面">
-      <change afterPath="$PROJECT_DIR$/api/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/register.js" afterDir="false" />
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="用户登录退出实现">
+      <change afterPath="$PROJECT_DIR$/api/course.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/photographer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/course/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/photographer/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photographer/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/photographer/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photographer/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -52,6 +48,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\maven_java\photography-PC\api" />
       <recent name="E:\maven_java\photography-PC\assets" />
     </key>
   </component>
@@ -89,7 +86,10 @@
       <workItem from="1608992703994" duration="2845000" />
       <workItem from="1609034617665" duration="2075000" />
       <workItem from="1609062605206" duration="101000" />
-      <workItem from="1609062727004" duration="7901000" />
+      <workItem from="1609062727004" duration="8973000" />
+      <workItem from="1609080391853" duration="38000" />
+      <workItem from="1609157063919" duration="119000" />
+      <workItem from="1609157209724" duration="10117000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -105,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609042642741</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="用户登录退出实现">
+      <created>1609078915247</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1609078915247</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +163,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="首页信息" />
     <MESSAGE value="用户登录和注册前端静态页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="用户登录和注册前端静态页面" />
+    <MESSAGE value="用户登录退出实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户登录退出实现" />
   </component>
 </project>

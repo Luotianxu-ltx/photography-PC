@@ -16,7 +16,7 @@
             <router-link to="/course" tag="li" active-class="current">
               <a>课程</a>
             </router-link>
-            <router-link to="/teacher" tag="li" active-class="current">
+            <router-link to="/photographer" tag="li" active-class="current">
               <a>名师</a>
             </router-link>
             <router-link to="/article" tag="li" active-class="current">
