@@ -40,11 +40,11 @@
                         :alt="course.title"
                       >
                       <div class="cc-mask">
-                        <a href="#" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
+                        <a :href="'/course/'+course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                       </div>
                     </section>
                     <h3 class="hLh30 txtOf mt10">
-                      <a href="#" :title="course.title" class="course-title fsize18 c-333">{{course.title}}</a>
+                      <a :href="'/course/'+course.id" :title="course.title" class="course-title fsize18 c-333">{{course.title}}</a>
                     </h3>
                     <section class="mt10 hLh20 of">
                       <span class="fr jgTag bg-green" v-if="Number(course.price) === 0">
@@ -63,7 +63,7 @@
               <div class="clear"></div>
             </article>
             <section class="tac pt20">
-              <a href="#" title="全部课程" class="comm-btn c-btn-2">全部课程</a>
+              <a href="/course" title="全部课程" class="comm-btn c-btn-2">全部课程</a>
             </section>
           </div>
         </section>
@@ -84,12 +84,12 @@
                 <li v-for="photographer in photographerList" :key="photographer.id">
                   <section class="i-teach-wrap">
                     <div class="i-teach-pic">
-                      <a href="/teacher/1" :title="photographer.name">
+                      <a :href="'/photographer/'+photographer.id" :title="photographer.name">
                         <img :alt="photographer.name" :src="photographer.avatar">
                       </a>
                     </div>
                     <div class="mt10 hLh30 txtOf tac">
-                      <a href="/teacher/1" :title="photographer.name" class="fsize18 c-666">{{photographer.name}}</a>
+                      <a :href="'/photographer/'+photographer.id" :title="photographer.name" class="fsize18 c-666">{{photographer.name}}</a>
                     </div>
                     <div class="hLh30 txtOf tac">
                       <span class="fsize14 c-999">{{photographer.career}}</span>
@@ -104,7 +104,7 @@
               <div class="clear"></div>
             </article>
             <section class="tac pt20">
-              <a href="#" title="全部讲师" class="comm-btn c-btn-2">全部讲师</a>
+              <a href="/photographer" title="全部摄影师" class="comm-btn c-btn-2">全部摄影师</a>
             </section>
           </div>
         </section>

@@ -26,5 +26,17 @@ export default {
       url: `/adminservice/courseservice/course-subject-one/getAllSubject`,
       method: 'get'
     })
+  },
+
+  /**
+   * 查询课程基本信息
+   * @param courseId
+   * @returns {*}
+   */
+  getCourseInfo(courseId) {
+    return request({
+      url: `/adminservice/courseFront/getFrontCourseInfo/${courseId}`,
+      method: 'get'
+    })
   }
 }
