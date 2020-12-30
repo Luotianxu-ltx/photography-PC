@@ -12,7 +12,7 @@
       <div>
         <article class="c-v-pic-wrap" style="height: 357px;">
           <section class="p-h-video-box" id="videoPlay">
-            <img :src="courseWebVo.cover" :alt="courseWebVo.title" class="dis c-v-pic">
+            <img height="357px" :src="courseWebVo.cover" :alt="courseWebVo.title" class="dis c-v-pic">
           </section>
         </article>
         <aside class="c-attr-wrap">
@@ -34,7 +34,7 @@
               </span>
             </section>
             <section class="c-attr-mt">
-              <a href="#" title="立即观看" class="comm-btn c-btn-3">立即观看</a>
+              <a @click="createOrders()" href="#" title="立即购买" class="comm-btn c-btn-3">立即购买</a>
             </section>
           </section>
         </aside>
@@ -161,15 +161,27 @@
 
 <script>
 import courseApi from "../../api/course";
+import ordersApi from "../../api/orders";
 export default {
   asyncData({params,error}) {
     return courseApi.getCourseInfo(params.id)
       .then(response => {
         return {
           courseWebVo: response.data.data.courseWebVo,
-          chapterVideoList: response.data.data.chapterVideoList
+          chapterVideoList: response.data.data.chapterVideoList,
+          courseId: params.id
         }
       })
+  },
+  methods: {
+    createOrders() {
+      ordersApi.createOrders(this.courseId)
+        .then(response => {
+          // 获取返回的订单号
+          // 生成订单后，跳转订单显示页面
+          this.$router.push({path:'/orders/' + response.data.data.orderId})
+        })
+    }
   }
 };
 </script>
