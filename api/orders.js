@@ -20,7 +20,7 @@ export default {
    */
   getOrdersInfo(id) {
     return request({
-      url: `/orderservice/course-order/getOrderInfo/${orderId}`,
+      url: `/orderservice/course-order/getOrderInfo/${id}`,
       method: 'get'
     })
   }

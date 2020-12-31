@@ -1,65 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="视频播放实现">
-      <change afterPath="$PROJECT_DIR$/api/orders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/activity_tab.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/bottom_rec.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/default.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/nice_select.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/order.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/pages-weixinpay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/css/swiper-3.3.1.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/cart_setp2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/erweima.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/f12c399b34115265a7a8a4da329b45d0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/phone-bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/article/hot.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/09.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/course/default.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/customer/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/customer/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/customer/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/customer/avatar-boy.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/01.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/02.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/03.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/04.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/05.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/06.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/07.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/08.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/photo/teacher/default.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/orders/_order.vue" afterDir="false" />
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="课程支付前端">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/reset.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/reset.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sign.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/sign.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/web.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/web.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/orders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/orders/_order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/orders/_id.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +90,8 @@
       <workItem from="1609207211213" duration="3498000" />
       <workItem from="1609243004688" duration="5451000" />
       <workItem from="1609308614937" duration="3448000" />
-      <workItem from="1609332149266" duration="3478000" />
+      <workItem from="1609332149266" duration="3697000" />
+      <workItem from="1609410918564" duration="2085000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -182,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609248021417</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="课程支付前端">
+      <created>1609341211968</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609341211968</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +190,7 @@
     <MESSAGE value="用户登录退出实现" />
     <MESSAGE value="摄影师列表页面和课程列表页面" />
     <MESSAGE value="视频播放实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="视频播放实现" />
+    <MESSAGE value="课程支付前端" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程支付前端" />
   </component>
 </project>

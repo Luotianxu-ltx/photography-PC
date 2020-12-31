@@ -73,7 +73,7 @@
 import ordersApi from "../../api/orders";
 export default {
   asyncData({params,error}) {
-    return ordersApi.getOrdersInfo(params.order)
+    return ordersApi.getOrdersInfo(params.id)
       .then(response =>{
         return {
           order: response.data.data.item
