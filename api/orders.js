@@ -23,5 +23,16 @@ export default {
       url: `/orderservice/course-order/getOrderInfo/${id}`,
       method: 'get'
     })
+  },
+  /**
+   * 课程支付
+   * @param id
+   * @returns {*}
+   */
+  updatePayStatus(id) {
+    return request({
+      url: `/orderservice/course-order/updatePayStatus/${id}`,
+      method: 'get'
+    })
   }
 }

@@ -80,6 +80,18 @@ export default {
         }
       })
   },
+  methods: {
+    toPay() {
+      ordersApi.updatePayStatus(this.order.orderNo)
+        .then(response => {
+          this.$message({
+            type: 'success',
+            message: '支付成功！'
+          })
+          this.$router.push({path: '/course/' + this.order.courseId})
+        })
+    },
+  }
 }
 </script>
 
