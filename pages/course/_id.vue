@@ -165,6 +165,7 @@
 <script>
 import courseApi from "../../api/course";
 import ordersApi from "../../api/orders";
+import cookie from "js-cookie";
 export default {
   asyncData({params,error}) {
     return {courseId: params.id}
@@ -173,7 +174,8 @@ export default {
     return {
       courseWebVo: {},
       chapterVideoList: [],
-      isbuy: false
+      isbuy: false,
+      token: ''
     }
   },
   created() {
@@ -189,12 +191,18 @@ export default {
         })
     },
     createOrders() {
-      ordersApi.createOrders(this.courseId)
-        .then(response => {
-          // 获取返回的订单号
-          // 生成订单后，跳转订单显示页面
-          this.$router.push({path:'/orders/' + response.data.data.orderId})
-        })
+      var userStr = cookie.get('photography_user')
+      console.log(userStr)
+      if (userStr === '') {
+        window.open('/login')
+      }else {
+        ordersApi.createOrders(this.courseId)
+          .then(response => {
+            // 获取返回的订单号
+            // 生成订单后，跳转订单显示页面
+            this.$router.push({path:'/orders/' + response.data.data.orderId})
+          })
+      }
     }
   }
 };

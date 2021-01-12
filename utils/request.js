@@ -3,7 +3,7 @@ import { MessageBox, Message } from 'element-ui'
 import cookie from "js-cookie"
 // 创建axios实例
 const service = axios.create({
-  baseURL:'http://localhost:9000',
+  baseURL:'http://127.0.0.1:8222',
   timeout:20000
 })
 

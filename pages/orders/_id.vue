@@ -15,9 +15,6 @@
         </tr>
         </tbody>
         <tbody>
-        <!-- <tr>
-          <td colspan="3" class="Title red f18 fb"><p>限时折扣</p></td>
-        </tr> -->
         <tr>
           <td colspan="3" class="teacher">摄影师：{{order.photographerName}}</td>
         </tr>
@@ -32,7 +29,6 @@
           </td>
           <td class="price">
             <p>￥<strong>{{order.totalFee}}</strong></p>
-            <!-- <span class="discName red">限时8折</span> -->
           </td>
           <td class="red priceNew Last">￥<strong>{{order.totalFee}}</strong></td>
         </tr>
@@ -48,8 +44,7 @@
       </table>
       <div class="Finish">
         <div class="fr" id="AgreeDiv">
-
-          <label for="Agree"><p class="on"><input type="checkbox" checked="checked">我已阅读并同意<a href="javascript:" target="_blank">《谷粒学院购买协议》</a></p></label>
+          <label for="Agree"><p class="on"><input type="checkbox" checked="checked">我已阅读并同意<a href="javascript:" target="_blank">《购买协议》</a></p></label>
         </div>
         <div class="clear"></div>
         <div class="Main fl">

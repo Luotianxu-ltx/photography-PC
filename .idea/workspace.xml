@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="修改订单id找不到bug">
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="课程支付完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/orders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/course/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/orders/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/orders/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,16 @@
       <workItem from="1609243004688" duration="5451000" />
       <workItem from="1609308614937" duration="3448000" />
       <workItem from="1609332149266" duration="3697000" />
-      <workItem from="1609410918564" duration="6649000" />
+      <workItem from="1609410918564" duration="6893000" />
+      <workItem from="1609464725364" duration="624000" />
+      <workItem from="1609510414393" duration="1491000" />
+      <workItem from="1609729299034" duration="40000" />
+      <workItem from="1609767543119" duration="31000" />
+      <workItem from="1609767620278" duration="222000" />
+      <workItem from="1609999479885" duration="761000" />
+      <workItem from="1610431858360" duration="17000" />
+      <workItem from="1610453932306" duration="408000" />
+      <workItem from="1610454770102" duration="3803000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -143,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609418770411</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="课程支付完成">
+      <created>1609424612426</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609424612429</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +217,7 @@
     <MESSAGE value="视频播放实现" />
     <MESSAGE value="课程支付前端" />
     <MESSAGE value="修改订单id找不到bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改订单id找不到bug" />
+    <MESSAGE value="课程支付完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程支付完成" />
   </component>
 </project>
