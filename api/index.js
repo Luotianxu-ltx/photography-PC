@@ -6,7 +6,7 @@ export default {
    */
   getBannerList() {
     return request({
-      url: `/h5service/bannerfront/getAllBanner`,
+      url: `/h5service/getAllBanner`,
       method: 'get'
     })
   },

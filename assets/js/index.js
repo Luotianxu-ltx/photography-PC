@@ -17,9 +17,9 @@ function sSwiperFun() {
         e.preventDefault();
         mySwiper.swipeNext();
     });
-    
+
     $(".imgload").eq(0).get(0).onload=function(){
     	$(".i-slide").css("height",$(".imgload").eq(0).height());
     }
-    
-};
+
+}

@@ -80,7 +80,6 @@
           <div>
             <article class="i-teacher-list">
               <ul class="of">
-
                 <li v-for="photographer in photographerList" :key="photographer.id">
                   <section class="i-teach-wrap">
                     <div class="i-teach-pic">
@@ -99,7 +98,6 @@
                     </div>
                   </section>
                 </li>
-
               </ul>
               <div class="clear"></div>
             </article>

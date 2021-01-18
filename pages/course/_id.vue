@@ -157,6 +157,91 @@
         </aside>
         <div class="clear"></div>
       </div>
+      <!-- 课程评论 -->
+      <div class="mt50 commentHtml"><div>
+        <h6 class="c-c-content c-infor-title" id="i-art-comment">
+          <span class="commentTitle">课程评论</span>
+        </h6>
+        <section class="lh-bj-list pr mt20 replyhtml">
+          <ul>
+            <li class="unBr">
+              <aside class="noter-pic">
+                <img width="50" height="50" class="picImg" :src="userInfo.avatar">
+              </aside>
+              <div class="of">
+                <section class="n-reply-wrap">
+                  <fieldset>
+                    <textarea name="" v-model="comment.content" placeholder="输入您要评论的文字" id="commentContent"></textarea>
+                  </fieldset>
+                  <p class="of mt5 tar pl10 pr10">
+                    <span class="fl "><tt class="c-red commentContentmeg" style="display: none;"></tt></span>
+                    <input type="button" @click="addComment()" value="回复" class="lh-reply-btn">
+                  </p>
+                </section>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <section class="">
+          <section class="question-list lh-bj-list pr">
+            <ul class="pr10">
+              <li v-for="(comment,index) in data.items" v-bind:key="index">
+                <aside class="noter-pic">
+                  <img width="50" height="50" class="picImg" :src="comment.avatar">
+                </aside>
+                <div class="of">
+                    <span class="fl">
+                    <font class="fsize12 c-blue">
+                      {{comment.nickname}}</font>
+                    <font class="fsize12 c-999 ml5">评论：</font></span>
+                </div>
+                <div class="noter-txt mt5">
+                  <p>{{comment.content}}</p>
+                </div>
+                <div class="of mt5">
+                  <span class="fr"><font class="fsize12 c-999 ml5">{{comment.gmtCreate}}</font></span>
+                </div>
+              </li>
+
+            </ul>
+          </section>
+        </section>
+
+        <!-- 公共分页 开始 -->
+        <div class="paging">
+          <!-- undisable这个class是否存在，取决于数据属性hasPrevious -->
+          <a
+            :class="{undisable: !data.hasPrevious}"
+            href="#"
+            title="首页"
+            @click.prevent="gotoPage(1)">首</a>
+          <a
+            :class="{undisable: !data.hasPrevious}"
+            href="#"
+            title="前一页"
+            @click.prevent="gotoPage(data.current-1)">&lt;</a>
+          <a
+            v-for="page in data.pages"
+            :key="page"
+            :class="{current: data.current === page, undisable: data.current === page}"
+            :title="'第'+page+'页'"
+            href="#"
+            @click.prevent="gotoPage(page)">{{ page }}</a>
+          <a
+            :class="{undisable: !data.hasNext}"
+            href="#"
+            title="后一页"
+            @click.prevent="gotoPage(data.current+1)">&gt;</a>
+          <a
+            :class="{undisable: !data.hasNext}"
+            href="#"
+            title="末页"
+            @click.prevent="gotoPage(data.pages)">末</a>
+          <div class="clear"/>
+        </div>
+        <!-- 公共分页 结束 -->
+      </div>
+      </div>
     </section>
     <!-- /课程详情 结束 -->
   </div>
@@ -165,6 +250,7 @@
 <script>
 import courseApi from "../../api/course";
 import ordersApi from "../../api/orders";
+import commentApi from "../../api/comment";
 import cookie from "js-cookie";
 export default {
   asyncData({params,error}) {
@@ -175,13 +261,33 @@ export default {
       courseWebVo: {},
       chapterVideoList: [],
       isbuy: false,
-      token: ''
+      token: '',
+      data: {},
+      userInfo:{},
+      page:1,
+      limit:4,
+      total:10,
+      comment:{},
     }
   },
   created() {
     this.initCourseInfo()
+    this.initComment()
+    this.initUserInfo()
   },
   methods: {
+    initUserInfo() {
+      var userStr = cookie.get('photography_user')
+      // 把字符串转换json对象(js对象)
+      if(userStr) {
+        this.userInfo = JSON.parse(userStr)
+      }
+    },
+    initComment() {
+      commentApi.getCommentList(this.page, this.limit, this.courseId).then(response => {
+        this.data = response.data.data
+      })
+    },
     initCourseInfo() {
       courseApi.getCourseInfo(this.courseId)
         .then(response => {
@@ -190,9 +296,28 @@ export default {
             this.isbuy = response.data.data.isBuy
         })
     },
+    addComment() {
+      this.comment.courseId =this.courseWebVo.id
+      this.comment.photographerId = this.courseWebVo.photographerId
+      commentApi.addComment(this.comment)
+      .then(response => {
+        if (response.data.success) {
+          this.$message({
+            type: 'success',
+            message: "评论成功"
+          })
+          this.comment.content = ''
+          this.initComment()
+        }
+      })
+    },
+    gotoPage(page){
+      commentApi.getCommentList(page, this.limit,this.courseId).then(response => {
+        this.data = response.data.data
+      })
+    },
     createOrders() {
       var userStr = cookie.get('photography_user')
-      console.log(userStr)
       if (userStr === '') {
         window.open('/login')
       }else {
