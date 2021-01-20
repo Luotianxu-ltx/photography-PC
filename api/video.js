@@ -3,7 +3,7 @@ export default {
 
   getPlayAuth(videoSourceId) {
     return request({
-      url: `/vodservice/video/getPlayAuth/${videoSourceId}`,
+      url: `/aliyun/video/getPlayAuth/${videoSourceId}`,
       method: 'get'
     })
   }

@@ -1,74 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="修改用户不登录报错">
-      <change afterPath="$PROJECT_DIR$/api/comment.js" afterDir="false" />
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="课程评论">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/article/hot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/banner/1525939573202.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/banner/153525d0ef15459596.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295379715.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295455437.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295472860.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295506745.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295527931.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295556203.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295570359.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295581911.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295592705.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442295604295.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442302831779.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/1442302852837.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/course/default.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/customer/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/customer/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/customer/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/customer/avatar-boy.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297885942.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297919077.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297927029.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297935589.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297957332.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297969808.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297977255.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297987091.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442297999141.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/1442298121626.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/photo/teacher/default.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/video.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,6 +110,10 @@
       <workItem from="1610851444679" duration="927000" />
       <workItem from="1610861693969" duration="5319000" />
       <workItem from="1610868058766" duration="102000" />
+      <workItem from="1610931683174" duration="134000" />
+      <workItem from="1610976511090" duration="344000" />
+      <workItem from="1611057595042" duration="2810000" />
+      <workItem from="1611119009146" duration="2506000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -239,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610459276759</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="课程评论">
+      <created>1610931738174</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610931738174</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +244,7 @@
     <MESSAGE value="修改订单id找不到bug" />
     <MESSAGE value="课程支付完成" />
     <MESSAGE value="修改用户不登录报错" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改用户不登录报错" />
+    <MESSAGE value="课程评论" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程评论" />
   </component>
 </project>
