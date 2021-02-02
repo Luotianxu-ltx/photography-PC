@@ -17,8 +17,8 @@
             <router-link to="/article" tag="li" active-class="current">
               <a>文章</a>
             </router-link>
-            <router-link to="/qa" tag="li" active-class="current">
-              <a>问答</a>
+            <router-link to="/picture" tag="li" active-class="current">
+              <a>照片</a>
             </router-link>
           </ul>
           <!-- / nav -->
@@ -33,12 +33,6 @@
               <a href="/register" title="注册">
                 <span class="vam ml5">注册</span>
               </a>
-            </li>
-            <li v-if="loginInfo.id" id="is-login-one" class="mr10">
-              <a id="headerMsgCountId" href="#" title="消息">
-                <em class="icon18 news-icon">&nbsp;</em>
-              </a>
-              <q class="red-point" style="display: none">&nbsp;</q>
             </li>
             <li v-if="loginInfo.id" id="is-login-two" class="h-r-user">
               <a href="/ucenter" title>
@@ -55,16 +49,6 @@
             </li>
             <!-- /未登录显示第1 li；登录后显示第2，3 li -->
           </ul>
-          <aside class="h-r-search">
-            <form action="#" method="post">
-              <label class="h-r-s-box">
-                <input type="text" placeholder="输入你想学的课程" name="queryCourse.courseName" value>
-                <button type="submit" class="s-btn">
-                  <em class="icon18">&nbsp;</em>
-                </button>
-              </label>
-            </form>
-          </aside>
         </div>
         <aside class="mw-nav-btn">
           <div class="mw-nav-icon"></div>
@@ -126,9 +110,9 @@ import '~/assets/css/nice_select.css'
 import '~/assets/css/order.css'
 import '~/assets/css/swiper-3.3.1.min.css'
 import "~/assets/css/pages-weixinpay.css"
+import "~/assets/css/picture.css"
 
 import cookie from 'js-cookie'
-import loginApi from "../api/login";
 
 export default {
   data() {
