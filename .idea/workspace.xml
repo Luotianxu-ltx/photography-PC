@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="课程评论">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/video.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/video.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,12 @@
       <workItem from="1610931683174" duration="134000" />
       <workItem from="1610976511090" duration="344000" />
       <workItem from="1611057595042" duration="2810000" />
-      <workItem from="1611119009146" duration="2506000" />
+      <workItem from="1611119009146" duration="3913000" />
+      <workItem from="1611191380787" duration="3121000" />
+      <workItem from="1611276666741" duration="27000" />
+      <workItem from="1611922206463" duration="1696000" />
+      <workItem from="1612008510470" duration="660000" />
+      <workItem from="1612231464445" duration="2883000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -185,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610931738174</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="课程评论">
+      <created>1611134177974</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611134177974</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
