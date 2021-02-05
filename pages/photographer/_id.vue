@@ -84,6 +84,6 @@ export default {
           courseList:response.data.data.courseList
         }
       })
-  },
+  }
 };
 </script>
