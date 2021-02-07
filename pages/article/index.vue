@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="btn">
-      123
+    <div class="btn" v-if="isAdd === true">
+      <button class="newClass" @click="add">发表文章</button>
     </div>
     <!-- 文章列表开始 -->
     <ul class="articlelList w1100">
@@ -62,14 +62,19 @@
 
 <script>
 import articleApi from "../../api/article";
+import cookie from "js-cookie";
+
 export default {
   data() {
     return {
-      data:{}
+      data: {},
+      user: {},
+      isAdd: true
     }
   },
   created() {
     this.gotoPage(1)
+    this.getUser()
   },
   methods: {
     getList(page) {
@@ -77,14 +82,23 @@ export default {
       .then(response => {
         this.data = response.data.data()
       })
-      console.log(this.data)
+    },
+    getUser() {
+      var userStr = cookie.get('photography_user')
+      if (userStr === undefined || userStr === "") {
+        this.isAdd = false
+      } else{
+        this.user = JSON.parse(userStr)
+      }
     },
     gotoPage(page) {
       articleApi.getArticleList(page,4)
       .then(response => {
         this.data = response.data.data
-        console.log(this.data)
       })
+    },
+    add() {
+      this.$router.push({path:'/article/addArticle'})
     }
   }
 }
@@ -117,6 +131,13 @@ textarea {
 
 .btn {
   width: 1100px;
+  margin: 0 auto;
+}
+
+.newClass {
+  height: 40px;
+  width: 100px;
+  margin-top: 5px;
 }
 
 .w1100 {
@@ -127,7 +148,7 @@ textarea {
 
 /* 文章信息开始 */
 .article-info {
-  margin-top: 10px;
+  margin-top:5px;
   overflow: hidden;
 }
 

@@ -318,7 +318,8 @@ export default {
     },
     createOrders() {
       var userStr = cookie.get('photography_user')
-      if (userStr === '') {
+      console.log(userStr)
+      if (userStr === undefined || userStr === "") {
         window.open('/login')
       }else {
         ordersApi.createOrders(this.courseId)
