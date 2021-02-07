@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="发表文章按钮">
-      <change afterPath="$PROJECT_DIR$/plugins/vue-quill-editor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/dark/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/dark/content.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/default/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/default/content.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/document/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/document/content.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/writer/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/content/writer/content.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.inline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.inline.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.mobile.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.mobile.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.shadowdom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.shadowdom.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.inline.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.inline.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.mobile.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.mobile.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.shadowdom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.shadowdom.min.css" afterDir="false" />
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="富文本编辑器">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/article.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/article/addArticle.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/addArticle.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/dark/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/dark/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/default/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/default/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/document/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/document/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/writer/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/content/writer/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.inline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/content.mobile.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/fonts/tinymce-mobile.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.mobile.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.shadowdom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide-dark/skin.shadowdom.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.inline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/content.mobile.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/fonts/tinymce-mobile.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.mobile.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.shadowdom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/tinymce/skins/ui/oxide/skin.shadowdom.min.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +172,7 @@
       <workItem from="1612660214833" duration="3734000" />
       <workItem from="1612666259292" duration="2228000" />
       <workItem from="1612668556464" duration="792000" />
-      <workItem from="1612698850161" duration="4519000" />
+      <workItem from="1612698850161" duration="6962000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -282,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612662432480</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="富文本编辑器">
+      <created>1612703625703</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1612703625703</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +349,7 @@
     <MESSAGE value="登录报错修改" />
     <MESSAGE value="文章管理" />
     <MESSAGE value="发表文章按钮" />
-    <option name="LAST_COMMIT_MESSAGE" value="发表文章按钮" />
+    <MESSAGE value="富文本编辑器" />
+    <option name="LAST_COMMIT_MESSAGE" value="富文本编辑器" />
   </component>
 </project>

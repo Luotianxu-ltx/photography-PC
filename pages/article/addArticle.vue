@@ -7,23 +7,57 @@
             <el-input type="text" placeholder="文章标题" v-model="articleInfo.title"></el-input>
           </div>
         </el-form-item>
-      </el-form>
-      <el-form>
-        <section class="container">
-          <div class="quill-editor editor"
-               :content="articleInfo.content"
-               @change="onEditorChange($event)"
-               v-quill:myQuillEditor="editorOption">
-          </div>
-        </section>
+
+        <!-- 课程封面-->
+        <el-form-item label="课程封面">
+          <el-upload
+            :action="'http://127.0.0.1:8222/aliyun/fileoss/article'"
+            list-type="picture-card"
+            :auto-upload="true"
+            :before-upload="beforeAvatarUpload"
+            :on-success="handleAvatarSuccess"
+          >
+            <i slot="default" class="el-icon-plus" />
+            <div slot="file" slot-scope="{file}">
+              <img
+                class="el-upload-list__item-thumbnail"
+                :src="articleInfo.picture"
+                alt=""
+              >
+              <span class="el-upload-list__item-actions">
+              <span
+                class="el-upload-list__item-preview"
+                @click="handlePictureCardPreview(file)"
+              >
+                <i class="el-icon-zoom-in" />
+              </span>
+            </span>
+            </div>
+          </el-upload>
+
+        </el-form-item>
+
+        <el-form-item>
+          <section class="container">
+            <div class="quill-editor editor"
+                 :content="articleInfo.content"
+                 @change="onEditorChange($event)"
+                 v-quill:myQuillEditor="editorOption">
+            </div>
+          </section>
+        </el-form-item>
       </el-form>
       <button @click="addNewArticle" class="newArticle">发表文章</button>
+      <el-dialog :visible.sync="dialogVisible">
+        <img width="100%" :src="articleInfo.picture" alt="">
+      </el-dialog>
     </div>
   </div>
 </template>
 
 <script>
 import cookie from "js-cookie";
+import articleApi from "../../api/article";
 
 const toolbarOptions = [
   ["bold", "italic", "underline", "strike"], // 加粗 斜体 下划线 删除线 -----['bold', 'italic', 'underline', 'strike']
@@ -54,7 +88,8 @@ export default {
         placeholder: "请输入正文",
       },
       user:{},
-      articleInfo:{}
+      articleInfo:{},
+      dialogVisible: false
     }
   },
   created() {
@@ -78,6 +113,38 @@ export default {
       this.articleInfo.userId = this.user.id
       this.articleInfo.userName = this.user.nickname
       console.log(this.articleInfo)
+      articleApi.addNewArticle(this.articleInfo)
+      .then(response => {
+        if (response.data.data.flag === true) {
+          this.$message({
+            type: 'success',
+            message: "新增文章成功"
+          })
+          this.$router.push({path:'/article'})
+        }
+      })
+    },
+    // 上传成功
+    handleAvatarSuccess(res, file) {
+      this.articleInfo.picture = res.data.url
+    },
+    // 上传之前
+    beforeAvatarUpload(file) {
+      const isJPG = file.type === 'image/jpeg'
+      const isLt2M = file.size / 1024 / 1024 < 2
+
+      if (!isJPG) {
+        this.$message.error('上传头像图片只能是 JPG 格式!')
+      }
+      if (!isLt2M) {
+        this.$message.error('上传头像图片大小不能超过 2MB!')
+      }
+      return isJPG && isLt2M
+    },
+    handlePictureCardPreview(file) {
+      this.dialogImageUrl = this.articleInfo.picture
+      this.dialogVisible = true
+
     }
   }
 }
