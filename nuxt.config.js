@@ -1,10 +1,14 @@
 module.exports = {
   plugins: [
-    { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false }
+    { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false },
+    { src: "~plugins/vue-quill-editor.js", ssr: false },
   ],
 
   css: [
-    'swiper/dist/css/swiper.css'
+    'swiper/dist/css/swiper.css',
+    'quill/dist/quill.snow.css',
+    'quill/dist/quill.bubble.css',
+    'quill/dist/quill.core.css'
   ],
   /*
   ** Headers of the page
