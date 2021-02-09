@@ -12,7 +12,9 @@
             </div>
           </div>
           <div class="article-content">
-            {{article.content}}
+            <p v-html="article.content">
+              {{article.content}}
+            </p>
           </div>
         </div>
       </div>

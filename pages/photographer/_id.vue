@@ -24,9 +24,7 @@
               <span class="t-tag-bg">{{photographer.intro}}</span>
             </section>
             <section class="t-infor-txt">
-              <p
-                class="mt20"
-              >{{photographer.career}}</p>
+              <p class="mt20">{{photographer.career}}</p>
             </section>
             <div class="clear"></div>
           </div>

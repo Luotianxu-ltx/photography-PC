@@ -15,8 +15,10 @@
             <span class="author">{{article.userName}}</span>
             <span>{{article.gmtModified}}</span>
           </div>
-          <div class="brief">
-            {{article.content}}
+          <div class="brief" style="overflow: hidden;height: 70px">
+            <p v-html="article.content">
+              {{article.content}}
+            </p>
           </div>
         </div>
       </li>

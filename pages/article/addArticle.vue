@@ -1,11 +1,9 @@
 <template>
   <div>
     <div class="articleInfo">
-      <el-form :model="articleInfo">
-        <el-form-item>
-          <div>
+      <el-form :model="articleInfo" :rules="rules">
+        <el-form-item prop="title">
             <el-input type="text" placeholder="文章标题" v-model="articleInfo.title"></el-input>
-          </div>
         </el-form-item>
 
         <!-- 课程封面-->
@@ -89,7 +87,12 @@ export default {
       },
       user:{},
       articleInfo:{},
-      dialogVisible: false
+      dialogVisible: false,
+      rules: {
+        title: [
+          { required: true, message: '请输入文章标题', trigger: 'blur' }
+        ]
+      }
     }
   },
   created() {
