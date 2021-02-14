@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="新增文章">
-      <change afterPath="$PROJECT_DIR$/api/picture.js" afterDir="false" />
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="Vue瀑布流">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/picture/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +142,7 @@
       <workItem from="1612841781130" duration="1180000" />
       <workItem from="1612868323096" duration="3120000" />
       <workItem from="1612919340702" duration="4234000" />
-      <workItem from="1613266622380" duration="16459000" />
+      <workItem from="1613266622380" duration="20913000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -273,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612836764796</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Vue瀑布流">
+      <created>1613294379348</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1613294379348</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +352,7 @@
     <MESSAGE value="发表文章按钮" />
     <MESSAGE value="富文本编辑器" />
     <MESSAGE value="新增文章" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增文章" />
+    <MESSAGE value="Vue瀑布流" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vue瀑布流" />
   </component>
 </project>
