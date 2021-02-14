@@ -3,6 +3,11 @@
     <div class="btn" v-if="isAdd === true">
       <button class="newClass" @click="add">发表文章</button>
     </div>
+    <!-- /无数据提示 开始-->
+    <section class="no-data-wrap" v-if="data.total === 0">
+      <em class="icon30 no-data-ico">&nbsp;</em>
+      <span class="c-666 fsize14 ml10 vam">没有相关数据，小编正在努力整理中...</span>
+    </section>
     <!-- 文章列表开始 -->
     <ul class="articlelList w1100">
       <li class="fl" v-for="article in data.items" :key="article.id">

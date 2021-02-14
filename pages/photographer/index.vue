@@ -6,12 +6,7 @@
         <h2 class="fl tac">
           <span class="c-333">全部摄影师</span>
         </h2>
-        <section class="c-tab-title">
-          <a id="subjectAll" title="全部" href="#"></a>
-          <!-- <c:forEach var="subject" items="${subjectList }">
-                            <a id="${subject.subjectId}" title="${subject.subjectName }" href="javascript:void(0)" onclick="submitForm(${subject.subjectId})">${subject.subjectName }</a>
-          </c:forEach>-->
-        </section>
+        <div class="clear"></div>
       </header>
       <section class="c-sort-box unBr">
         <div>

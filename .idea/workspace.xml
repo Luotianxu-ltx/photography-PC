@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="Vue瀑布流">
+      <change afterPath="$PROJECT_DIR$/pages/ucenter.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/article/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/photographer/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photographer/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/picture/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -142,7 +147,7 @@
       <workItem from="1612841781130" duration="1180000" />
       <workItem from="1612868323096" duration="3120000" />
       <workItem from="1612919340702" duration="4234000" />
-      <workItem from="1613266622380" duration="20913000" />
+      <workItem from="1613266622380" duration="22515000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -277,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613294379348</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Vue瀑布流">
+      <created>1613305262472</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1613305262472</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

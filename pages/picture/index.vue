@@ -24,18 +24,11 @@
               </ul>
             </dd>
           </dl>
-          <dl>
-            <dt>
-              <span class="c-999 fsize14"></span>
-            </dt>
-            <dd class="c-s-dl-li">
-              <ul class="clearfix">
-                <li v-for="(item,index) in subSubjectList" :key="index" :class="{active:twoIndex === index}">
-                  <a :title="item.title" href="#">{{item.title}}</a>
-                </li>
-              </ul>
-            </dd>
-          </dl>
+          <ul class="clearfix">
+            <li v-for="(item,index) in subSubjectList" :key="index" :class="{active:twoIndex === index}">
+              <a :title="item.title" href="#">{{item.title}}</a>
+            </li>
+          </ul>
           <div class="clear"></div>
         </section>
         <div class="mt40">
