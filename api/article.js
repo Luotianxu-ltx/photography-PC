@@ -37,5 +37,27 @@ export default {
       method: 'post',
       data: articleInfo
     })
-  }
+  },
+  /**
+   * 根据用户id查询文章
+   * @param userId
+   * @returns {*}
+   */
+  getByUserId(userId) {
+    return request({
+      url: `/h5service/article/getByUserId/${userId}`,
+      method: 'get'
+    })
+  },
+  /**
+   * 删除
+   * @param id
+   * @returns {AxiosPromise}
+   */
+  delete(id) {
+    return request({
+      url: `/h5service/article/deleteArticle/${id}`,
+      method: 'delete'
+    })
+  },
 }
