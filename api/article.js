@@ -60,4 +60,16 @@ export default {
       method: 'delete'
     })
   },
+  /**
+   * 更新
+   * @param form
+   * @returns {*}
+   */
+  update(form) {
+    return request({
+      url: `/h5service/article/update`,
+      method: 'post',
+      data: form
+    })
+  }
 }

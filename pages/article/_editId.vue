@@ -127,12 +127,12 @@ export default {
       this.articleInfo.userId = this.user.id
       this.articleInfo.userName = this.user.nickname
       console.log(this.articleInfo)
-      articleApi.addNewArticle(this.articleInfo)
+      articleApi.update(this.articleInfo)
         .then(response => {
           if (response.data.data.flag === true) {
             this.$message({
               type: 'success',
-              message: "新增文章成功"
+              message: "修改文章成功"
             })
             this.$router.push({path:'/article'})
           }
