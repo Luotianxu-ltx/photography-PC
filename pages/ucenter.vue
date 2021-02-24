@@ -27,6 +27,9 @@
     </div>
   </div>
   <div class="article" v-if="flag === 0">
+    <div class="btn">
+      <button class="newClass" @click="addArticle">发表文章</button>
+    </div>
     <el-table
     v-loading="listLoading"
     :data="articleList"
@@ -34,7 +37,7 @@
     border
     fit
     highlight-current-row
-    style="margin-top: 20px"
+    style="margin-top: 10px"
     >
       <el-table-column label="封面" width="100" align="center">
         <template slot-scope="scope">
@@ -63,6 +66,9 @@
     </el-table>
   </div>
   <div class="picture" v-if="flag === 1">
+    <div class="btn">
+      <button class="newClass" @click="addPicture">发布照片</button>
+    </div>
     <!-- 表格 -->
     <el-table
       v-loading="listLoading"
@@ -71,7 +77,7 @@
       border
       fit
       highlight-current-row
-      style="margin-top: 20px"
+      style="margin-top: 10px"
     >
       <el-table-column label="照片" width="100" align="center">
         <template slot-scope="scope">
@@ -117,6 +123,33 @@
           <el-radio :label="2">男</el-radio>
         </el-radio-group>
       </el-form-item>
+      <!-- 用户头像-->
+      <el-form-item label="用户头像">
+        <el-upload
+          :action="'http://127.0.0.1:8222/aliyun/fileoss/user'"
+          list-type="picture-card"
+          :auto-upload="true"
+          :before-upload="beforeAvatarUpload"
+          :on-success="handleAvatarSuccess"
+        >
+          <i slot="default" class="el-icon-plus" />
+          <div slot="file" slot-scope="{file}">
+            <img
+              class="el-upload-list__item-thumbnail"
+              :src="form.avatar"
+              alt=""
+            >
+            <span class="el-upload-list__item-actions">
+              <span
+                class="el-upload-list__item-preview"
+                @click="handlePictureCardPreview(file)"
+              >
+                <i class="el-icon-zoom-in" />
+              </span>
+            </span>
+          </div>
+        </el-upload>
+      </el-form-item>
 
     </el-form>
     <div slot="footer" class="dialog-footer">
@@ -159,6 +192,12 @@ export default {
 
   },
   methods: {
+    addArticle() {
+      this.$router.push({path:'/article/addArticle'})
+    },
+    addPicture() {
+      this.$router.push({path:'/picture/addPicture'})
+    },
     update() {
       userApi.edit(this.form)
       .then(response => {
@@ -264,6 +303,27 @@ export default {
         this.$refs[formName].resetFields();
       })
     },
+    // 上传成功
+    handleAvatarSuccess(res, file) {
+      this.form.avatar = res.data.url
+    },
+    // 上传之前
+    beforeAvatarUpload(file) {
+      const isJPG = file.type === 'image/jpeg'
+      const isLt2M = file.size / 1024 / 1024 < 2
+
+      if (!isJPG) {
+        this.$message.error('上传头像图片只能是 JPG 格式!')
+      }
+      if (!isLt2M) {
+        this.$message.error('上传头像图片大小不能超过 2MB!')
+      }
+      return isJPG && isLt2M
+    },
+    handlePictureCardPreview(file) {
+      this.dialogImageUrl = this.articleInfo.picture
+      this.dialogVisible = true
+    }
   }
 
 }
@@ -336,5 +396,15 @@ export default {
 }
 .picture {
   margin-bottom: 15px;
+}
+.btn {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.newClass {
+  height: 40px;
+  width: 100px;
+  margin-top: 5px;
 }
 </style>

@@ -38,6 +38,7 @@
                         :src="course.cover"
                         class="img-responsive"
                         :alt="course.title"
+                        style="height: 150px;margin: 0 auto;width: 100%"
                       >
                       <div class="cc-mask">
                         <a :href="'/course/'+course.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>

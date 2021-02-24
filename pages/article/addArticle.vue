@@ -32,7 +32,6 @@
             </span>
             </div>
           </el-upload>
-
         </el-form-item>
 
         <el-form-item>
@@ -147,7 +146,6 @@ export default {
     handlePictureCardPreview(file) {
       this.dialogImageUrl = this.articleInfo.picture
       this.dialogVisible = true
-
     }
   }
 }

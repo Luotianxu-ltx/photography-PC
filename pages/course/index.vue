@@ -71,7 +71,7 @@
               <li v-for="item in data.items" :key="item.id">
                 <div class="cc-l-wrap">
                   <section class="course-img">
-                    <img :src="item.cover" class="img-responsive" :alt="item.title">
+                    <img :src="item.cover" class="img-responsive" :alt="item.title" style="height: 150px;margin: 0 auto;width: 100%">
                     <div class="cc-mask">
                       <a :href="'/course/'+item.id" title="开始学习" class="comm-btn c-btn-1">开始学习</a>
                     </div>

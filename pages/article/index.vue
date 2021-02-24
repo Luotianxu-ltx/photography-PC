@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="btn" v-if="isAdd === true">
-      <button class="newClass" @click="add">发表文章</button>
-    </div>
     <!-- /无数据提示 开始-->
     <section class="no-data-wrap" v-if="data.total === 0">
       <em class="icon30 no-data-ico">&nbsp;</em>
@@ -103,9 +100,6 @@ export default {
       .then(response => {
         this.data = response.data.data
       })
-    },
-    add() {
-      this.$router.push({path:'/article/addArticle'})
     }
   }
 }
@@ -136,16 +130,7 @@ textarea {
   margin-right: 20px;
 }
 
-.btn {
-  width: 1100px;
-  margin: 0 auto;
-}
 
-.newClass {
-  height: 40px;
-  width: 100px;
-  margin-top: 5px;
-}
 
 .w1100 {
   width: 1100px;

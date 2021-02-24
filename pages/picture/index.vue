@@ -33,7 +33,7 @@
         </section>
         <div class="mt40">
           <!-- /无数据提示 开始-->
-          <section class="no-data-wrap" v-if="data.total === 0">
+          <section class="no-data-wrap" v-if="data.length === 0">
             <em class="icon30 no-data-ico">&nbsp;</em>
             <span class="c-666 fsize14 ml10 vam">没有相关数据，小编正在努力整理中...</span>
           </section>
