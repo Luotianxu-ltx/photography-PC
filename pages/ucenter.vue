@@ -14,7 +14,7 @@
           <li>年龄：{{userInfo.age}}</li>
           <li>性别：{{userInfo.sex}}</li>
         </ul>
-        <el-button type="primary" icon="el-icon-edit" circle class="edit" @click="dialogVisible = true"></el-button>
+        <el-button type="primary" icon="el-icon-edit" circle class="edit" @click="edit()"></el-button>
       </div>
     </div>
   </div>
@@ -118,7 +118,7 @@
     </el-form>
     <div slot="footer" class="dialog-footer">
       <el-button @click="dialogVisible = false">取 消</el-button>
-      <el-button type="primary">确 定</el-button>
+      <el-button type="primary" @click="update()">确 定</el-button>
     </div>
   </el-dialog>
 </div>
@@ -128,6 +128,7 @@
 import cookie from "js-cookie";
 import articleApi from "../api/article";
 import pictureApi from "../api/picture";
+import userApi from "../api/user";
 
 export default {
   data() {
@@ -155,6 +156,26 @@ export default {
 
   },
   methods: {
+    update() {
+      userApi.edit(this.form)
+      .then(response => {
+        if (response.data.data.flag === true) {
+          this.$message({
+            type: 'success',
+            message: '修改成功'
+          })
+          //清空cookie值
+          cookie.set('photography_token','',{domain: 'localhost'})
+          cookie.set('photography_user','',{domain: 'localhost'})
+          //回到登录页面
+          window.location.href = "/login";
+        }
+      })
+    },
+    edit() {
+      this.form = this.userInfo
+      this.dialogVisible = true
+    },
     article() {
       this.flag = 0
       this.getArticleList()

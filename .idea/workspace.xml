@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="修改页面">
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="修改文章">
+      <change afterPath="$PROJECT_DIR$/api/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/article/_editId.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/_editId.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/ucenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ucenter.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +15,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -149,7 +149,9 @@
       <workItem from="1613473029510" duration="13000" />
       <workItem from="1613526661390" duration="10186000" />
       <workItem from="1613555654534" duration="1878000" />
-      <workItem from="1613782775622" duration="2481000" />
+      <workItem from="1613782775622" duration="3307000" />
+      <workItem from="1613955751877" duration="28000" />
+      <workItem from="1614133811402" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -319,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613788273515</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="修改文章">
+      <created>1613790516114</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1613790516114</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,6 +406,7 @@
     <MESSAGE value="Vue瀑布流" />
     <MESSAGE value="个人简介页面" />
     <MESSAGE value="修改页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改页面" />
+    <MESSAGE value="修改文章" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改文章" />
   </component>
 </project>
