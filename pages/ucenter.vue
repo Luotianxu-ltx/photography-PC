@@ -12,7 +12,8 @@
           <li>用户昵称：{{userInfo.nickname}}</li>
           <li>电话号码：{{userInfo.mobile}}</li>
           <li>年龄：{{userInfo.age}}</li>
-          <li>性别：{{userInfo.sex}}</li>
+          <li v-if="userInfo.sex === 1">性别：女</li>
+          <li v-else>性别：男</li>
         </ul>
         <el-button type="primary" icon="el-icon-edit" circle class="edit" @click="edit()"></el-button>
       </div>
@@ -99,8 +100,8 @@
     </el-table>
   </div>
 
-  <el-dialog title="修改用户信息" :visible.sync="dialogVisible" @close="closeDialog">
-    <el-form ref="form" :rules="rules" :model="form" label-width="80px">
+  <el-dialog title="修改用户信息" :visible.sync="dialogVisible" @close="closeDialog('userForm')">
+    <el-form ref="userForm" :rules="rules" :model="form" label-width="80px" >
       <el-form-item label="昵称" prop="nickname">
         <el-input v-model="form.nickname" />
       </el-form-item>
@@ -110,9 +111,11 @@
       <el-form-item label="电话号码" prop="mobile">
         <el-input v-model="form.mobile" />
       </el-form-item>
-      <el-form-item label="性别" prop="sex">
-        <el-radio v-model="form.sex" label="1">女</el-radio>
-        <el-radio v-model="form.sex" label="2">男</el-radio>
+      <el-form-item label="性别" prop="sex" >
+        <el-radio-group v-model="form.sex">
+          <el-radio :label="1">女</el-radio>
+          <el-radio :label="2">男</el-radio>
+        </el-radio-group>
       </el-form-item>
 
     </el-form>
@@ -256,8 +259,10 @@ export default {
         })
       })
     },
-    closeDialog() {
-      this.form = {}
+    closeDialog(formName) {
+      this.$nextTick(() => {
+        this.$refs[formName].resetFields();
+      })
     },
   }
 
