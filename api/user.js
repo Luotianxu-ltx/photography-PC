@@ -8,7 +8,7 @@ export default {
    */
   edit(form) {
     return request({
-      url: `/h5service/user/updateById`,
+      url: `/h5service/user/update`,
       method: 'post',
       data: form
     })

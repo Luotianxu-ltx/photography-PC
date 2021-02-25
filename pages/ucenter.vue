@@ -107,18 +107,18 @@
   </div>
 
   <el-dialog title="修改用户信息" :visible.sync="dialogVisible" @close="closeDialog('userForm')">
-    <el-form ref="userForm" :rules="rules" :model="form" label-width="80px" >
+    <el-form ref="userForm" :rules="rules" :model="userInfo" label-width="80px" >
       <el-form-item label="昵称" prop="nickname">
-        <el-input v-model="form.nickname" />
+        <el-input v-model="userInfo.nickname" />
       </el-form-item>
       <el-form-item label="年龄" prop="age">
-        <el-input v-model="form.age" />
+        <el-input v-model="userInfo.age" />
       </el-form-item>
       <el-form-item label="电话号码" prop="mobile">
-        <el-input v-model="form.mobile" />
+        <el-input v-model="userInfo.mobile" />
       </el-form-item>
       <el-form-item label="性别" prop="sex" >
-        <el-radio-group v-model="form.sex">
+        <el-radio-group v-model="userInfo.sex">
           <el-radio :label="1">女</el-radio>
           <el-radio :label="2">男</el-radio>
         </el-radio-group>
@@ -136,7 +136,7 @@
           <div slot="file" slot-scope="{file}">
             <img
               class="el-upload-list__item-thumbnail"
-              :src="form.avatar"
+              :src="userInfo.avatar"
               alt=""
             >
             <span class="el-upload-list__item-actions">
@@ -199,7 +199,7 @@ export default {
       this.$router.push({path:'/picture/addPicture'})
     },
     update() {
-      userApi.edit(this.form)
+      userApi.edit(this.userInfo)
       .then(response => {
         if (response.data.data.flag === true) {
           this.$message({
@@ -215,7 +215,6 @@ export default {
       })
     },
     edit() {
-      this.form = this.userInfo
       this.dialogVisible = true
     },
     article() {
@@ -240,14 +239,12 @@ export default {
       .then(response => {
         this.articleList = response.data.data.list
         this.listLoading = false
-        console.log(this.articleList)
       })
     },
     getPictureList() {
       pictureApi.getPictureByUserId(this.userInfo.id)
       .then(response => {
         this.pictureList = response.data.data.list
-        console.log(this.pictureList)
       })
     },
     removeArticleById(id) {
@@ -305,7 +302,7 @@ export default {
     },
     // 上传成功
     handleAvatarSuccess(res, file) {
-      this.form.avatar = res.data.url
+      this.userInfo.avatar = res.data.url
     },
     // 上传之前
     beforeAvatarUpload(file) {

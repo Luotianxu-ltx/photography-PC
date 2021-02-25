@@ -4,10 +4,9 @@
     <!-- 幻灯片 开始 -->
     <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
-
-        <div v-for="banner in bannerList" :key="banner.id" class="swiper-slide" style="background: #040B1B;">
+        <div v-for="banner in bannerList" :key="banner.id" class="swiper-slide" style="background: #040B1B;position: relative; overflow: hidden;">
           <a target="_blank" :href="banner.linkUrl">
-            <img :src="banner.imageUrl" :alt="banner.title">
+            <img :src="banner.imageUrl" :alt="banner.title" style="position: absolute;left: 50%;transform: translateX(-50%)">
           </a>
         </div>
 
