@@ -73,7 +73,7 @@ export default {
           if(response.data.code !== 20000){
             this.$message({
               type: 'warning',
-              message: response.data.messag登录
+              message: response.data.message
             })
           } else {
             // console.log(response.data.data.token)

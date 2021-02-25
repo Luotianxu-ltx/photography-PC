@@ -35,4 +35,16 @@ export default {
       method: 'delete'
     })
   },
+  /**
+   * 新增照片
+   * @param pictureInfo
+   * @returns {*}
+   */
+  addNewPicter(pictureInfo) {
+    return request({
+      url: `/h5service/picture/addPicture`,
+      method: 'post',
+      data: pictureInfo
+    })
+  }
 }

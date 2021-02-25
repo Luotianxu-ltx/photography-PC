@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="图片高度">
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="用户修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/ucenter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/ucenter.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/picture.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/picture/addPicture.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/addPicture.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +154,7 @@
       <workItem from="1613955751877" duration="28000" />
       <workItem from="1614133811402" duration="1085000" />
       <workItem from="1614147261781" duration="12258000" />
-      <workItem from="1614233868180" duration="3800000" />
+      <workItem from="1614233868180" duration="6759000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -352,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614160955114</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="用户修改">
+      <created>1614242644314</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1614242644314</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,6 +441,7 @@
     <MESSAGE value="修改用户" />
     <MESSAGE value="用户弹窗" />
     <MESSAGE value="图片高度" />
-    <option name="LAST_COMMIT_MESSAGE" value="图片高度" />
+    <MESSAGE value="用户修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户修改" />
   </component>
 </project>
