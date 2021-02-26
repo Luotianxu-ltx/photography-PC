@@ -7,10 +7,11 @@ export default {
    * @param limit
    * @returns {*}
    */
-  getPictureList(current,limit) {
+  getPictureList(current,limit,searchObj) {
     return request({
-      url: `/h5service/picture/getListFront/${current}/${limit}`,
-      method: 'post'
+      url: `/h5service/picture/getListPicture/${current}/${limit}`,
+      method: 'post',
+      data: searchObj
     })
   },
   /**

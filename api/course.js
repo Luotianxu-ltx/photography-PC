@@ -38,5 +38,15 @@ export default {
       url: `/adminservice/courseFront/getFrontCourseInfo/${courseId}`,
       method: 'get'
     })
-  }
+  },
+  /**
+   * 获取树形结构
+   * @returns {AxiosPromise}
+   */
+  getAllListTree() {
+    return request({
+      url: `/adminservice/courseservice/course-subject-one/getAllSubject`,
+      method: 'get'
+    })
+  },
 }

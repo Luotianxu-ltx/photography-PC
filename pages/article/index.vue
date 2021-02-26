@@ -17,11 +17,6 @@
             <span class="author">{{article.userName}}</span>
             <span>{{article.gmtModified}}</span>
           </div>
-          <div class="brief" style="overflow: hidden;height: 70px">
-            <p v-html="article.content">
-              {{article.content}}
-            </p>
-          </div>
         </div>
       </li>
     </ul>
@@ -130,8 +125,6 @@ textarea {
   margin-right: 20px;
 }
 
-
-
 .w1100 {
   width: 1100px;
   height: 935px;
@@ -182,7 +175,7 @@ textarea {
 
 .articlelList li {
   width: 530px;
-  height: 430px;
+  height: 350px;
   background: #FFF;
   margin-top: 30px;
   box-shadow: 2px 2px 3px #e1e1e1;

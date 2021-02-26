@@ -6,6 +6,27 @@
           <el-input type="text" placeholder="照片标题" v-model="pictureInfo.title"></el-input>
         </el-form-item>
 
+        <el-form-item label="课程分类">
+          <el-select v-model="one" placeholder="一级分类" @change="subjectLevelOneChanged">
+            <el-option
+              v-for="subject in subjectOneList"
+              :key="subject.id"
+              :label="subject.title"
+              :value="subject.id"
+            />
+          </el-select>
+
+          <!-- 二级分类 -->
+          <el-select v-model="pictureInfo.subjectTwoId" placeholder="二级分类" style="margin-left: 5px">
+            <el-option
+              v-for="subject in subjectTwoList"
+              :key="subject.id"
+              :label="subject.title"
+              :value="subject.id"
+            />
+          </el-select>
+        </el-form-item>
+
         <!-- 照片-->
         <el-form-item label="照片">
           <el-upload
@@ -46,6 +67,7 @@
 <script>
 import cookie from "js-cookie";
 import pictureApi from "../../api/picture";
+import courseApi from "../../api/course";
 
 export default {
   data () {
@@ -54,6 +76,9 @@ export default {
       user:{},
       pictureInfo:{},
       dialogVisible: false,
+      one: '',
+      subjectOneList: [], // 一级分类
+      subjectTwoList: [], // 二级分类
       rules: {
         title: [
           { required: true, message: '请输入照片标题', trigger: 'blur' }
@@ -63,8 +88,33 @@ export default {
   },
   created() {
     // this.getUser()
+    // 初始化一级分类
+    this.getOneSubject()
   },
   methods: {
+    // 点击某个一级分类，触发change，显示对应二级分类
+    // value就是一份分类id
+    subjectLevelOneChanged(value) {
+      // 遍历所有分类，包含一级和二级
+      for (var i = 0; i < this.subjectOneList.length; i++) {
+        // 每个一级分类
+        var oneSubject = this.subjectOneList[i]
+        // 判断： 所有一级分类id和点击一级分类id是否一样
+        if (value === oneSubject.id) {
+          // 从一级分类中获取所有二级分类
+          this.subjectTwoList = oneSubject.children
+          // 清空二级表单
+          this.pictureInfo.subjectTwoId = ''
+        }
+      }
+    },
+    // 获取一级分类
+    getOneSubject() {
+      courseApi.getAllListTree()
+        .then(response => {
+          this.subjectOneList = response.data.data.list
+        })
+    },
     getUser() {
       var userStr = cookie.get('photography_user')
       console.log(userStr)
@@ -97,15 +147,11 @@ export default {
     // 上传之前
     beforeAvatarUpload(file) {
       const isJPG = file.type === 'image/jpeg'
-      const isLt2M = file.size / 1024 / 1024 < 2
 
       if (!isJPG) {
         this.$message.error('上传头像图片只能是 JPG 格式!')
       }
-      if (!isLt2M) {
-        this.$message.error('上传头像图片大小不能超过 2MB!')
-      }
-      return isJPG && isLt2M
+      return isJPG
     },
     handlePictureCardPreview(file) {
       this.dialogImageUrl = this.articleInfo.picture

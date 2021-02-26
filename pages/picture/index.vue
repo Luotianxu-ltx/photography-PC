@@ -16,19 +16,27 @@
             <dd class="c-s-dl-li">
               <ul class="clearfix">
                 <li>
-                  <a title="全部" href="#">全部</a>
+                  <a title="全部" href="#" @click="getAll">全部</a>
                 </li>
                 <li v-for="(item,index) in subjectNestedList" :key="index" :class="{active:oneIndex === index}">
-                  <a :title="item.title" href="#">{{item.title}}</a>
+                  <a :title="item.title" href="#" @click="searchOne(item.id,index)">{{item.title}}</a>
                 </li>
               </ul>
             </dd>
           </dl>
-          <ul class="clearfix">
-            <li v-for="(item,index) in subSubjectList" :key="index" :class="{active:twoIndex === index}">
-              <a :title="item.title" href="#">{{item.title}}</a>
-            </li>
-          </ul>
+
+          <dl>
+            <dt>
+              <span class="c-999 fsize14"></span>
+            </dt>
+            <dd class="c-s-dl-li">
+              <ul class="clearfix">
+                <li v-for="(item,index) in subSubjectList" :key="index" :class="{active:twoIndex === index}">
+                  <a :title="item.title" href="#" @click="searchTwo(item.id,index)">{{item.title}}</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
           <div class="clear"></div>
         </section>
         <div class="mt40">
@@ -49,13 +57,12 @@
               </div>
             </div>
           </section>
-
         </div>
       </section>
     </section>
     <!-- 照片列表 结束 -->
     <div class="w1100">
-      <button class="morePicture">加载更多</button>
+      <button class="morePicture" @click="more">加载更多</button>
     </div>
   </div>
 </template>
@@ -72,6 +79,9 @@ export default {
       searchObj: {}, // 查询表单对象
       oneIndex:-1,
       twoIndex:-1,
+      current: 1,
+      morePicture: {},
+      before: {},
       data: {}
     }
   },
@@ -83,6 +93,32 @@ export default {
   mounted() {
   },
   methods: {
+    // 点击一级分类，查询二级分类
+    searchOne(subjectOneId,index) {
+      // 更改样式
+      this.oneIndex = index
+      this.twoIndex = -1
+      this.searchObj.subjectId = ""
+      this.subSubjectList = []
+      // 用一级分类id查询二级分类
+      for(let i = 0; i < this.subjectNestedList.length; i++) {
+        var onesubject = this.subjectNestedList[i]
+        // 比较id是否相同
+        if (subjectOneId === onesubject.id) {
+          this.subSubjectList = onesubject.children
+        }
+      }
+    },
+    // 点击二级分类查询课程
+    searchTwo(subjectTwoId,index) {
+      this.twoIndex = index
+      this.searchObj.subjectTwoId = subjectTwoId
+      this.getList()
+    },
+    getAll() {
+      this.searchObj = {}
+      this.getList()
+    },
     // 查询所有分类
     initSubject() {
       courseApi.getAllSubject()
@@ -90,21 +126,32 @@ export default {
           this.subjectNestedList = response.data.data.list
         })
     },
+    more() {
+      this.current += 1
+      pictureApi.getPictureList(this.current,8,this.searchObj)
+      .then(response => {
+        this.morePicture = response.data.data.list
+        this.before.push(...this.morePicture)
+        this.data = this.before
+        this.sliceData2()
+      })
+    },
     getList() {
-      pictureApi.getPictureList(1,20)
+      pictureApi.getPictureList(this.current,8,this.searchObj)
         .then(response => {
-          this.data = response.data.data.list
+          this.before = response.data.data.list
+          this.data = this.before
           // this.sliceData()
           this.sliceData2()
         })
     },
     sliceData() {
       const width = window.innerWidth
-      console.log("width: " + width)
+      // console.log("width: " + width)
       const column = Math.floor(width / 220)
-      console.log("column: " + column)
+      // console.log("column: " + column)
       const num = Math.floor(this.data.length / column)
-      console.log("num: " + num)
+      // console.log("num: " + num)
       let arr = this.data.map((item,index) => {
         if (index < num - 2) {
           return this.data.slice(index * num,(index + 1) * num)
@@ -116,13 +163,13 @@ export default {
       })
       arr = arr.filter(item => item)
       this.data = arr
-      console.log(this.data)
+      // console.log(this.data)
     },
     sliceData2() {
       const column = Math.floor(1100 / 200)
-      console.log("column: " + column)
+      // console.log("column: " + column)
       const num = Math.floor(this.data.length / column)
-      console.log("num: " + num)
+      // console.log("num: " + num)
       let arr = this.data.map((item,index) => {
         if (index <= column - 2) {
           return this.data.slice(index * num,(index + 1) * num)
@@ -134,7 +181,7 @@ export default {
       })
       arr = arr.filter(item => item)
       this.data = arr
-      console.log(this.data)
+      // console.log(this.data)
     }
   }
 }

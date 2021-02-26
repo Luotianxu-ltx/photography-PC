@@ -34,7 +34,7 @@
               </span>
             </section>
             <section v-if="isbuy || Number(courseWebVo.price) === 0" class="c-attr-mt">
-              <a href="#" title="立即观看" class="comm-btn c-btn-3">立即观看</a>
+              <a href="#" title="立即观看" class="comm-btn c-btn-3">可以观看</a>
             </section>
             <section v-else class="c-attr-mt">
               <a @click="createOrders()" href="#" title="立即购买" class="comm-btn c-btn-3">立即购买</a>
@@ -110,12 +110,12 @@
                             </a>
                             <ol class="lh-menu-ol" style="display: block;">
                               <li class="lh-menu-second ml30" v-for="video in chapter.children" :key="video.id">
-                                <a :href="'/player/' + video.videoSourceId" target="_blank">
-                                  <span class="fr">
-                                    <i class="free-icon vam mr10">免费试听</i>
+                                  <span class="fr" v-if="isbuy || Number(courseWebVo.price) === 0">
+                                    <a :href="'/player/' + video.videoSourceId" target="_blank">
+                                      <i class="free-icon vam mr10">立即观看</i>
+                                    </a>
                                   </span>
                                   <em class="lh-menu-i-2 icon16 mr5">&nbsp;</em>{{video.title}}
-                                </a>
                               </li>
                             </ol>
                           </li>
