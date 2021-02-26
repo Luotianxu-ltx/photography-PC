@@ -1,4 +1,4 @@
-<template>
+<template xmlns:id="http://www.w3.org/1999/xhtml">
   <div>
     <div class="articleInfo">
       <el-form :model="pictureInfo" :rules="rules">
@@ -39,6 +39,7 @@
             <i slot="default" class="el-icon-plus" />
             <div slot="file" slot-scope="{file}">
               <img
+                id="img"
                 class="el-upload-list__item-thumbnail"
                 :src="pictureInfo.url"
                 alt=""
@@ -68,6 +69,7 @@
 import cookie from "js-cookie";
 import pictureApi from "../../api/picture";
 import courseApi from "../../api/course";
+import EXIF from "exif-js";
 
 export default {
   data () {
@@ -126,8 +128,15 @@ export default {
     },
     addNewPicture() {
       this.getUser()
+      var img = document.getElementById("img")
+      console.log(img)
+      EXIF.getData(img,function () {
+        var res = EXIF.getAllTags(this);
+        console.log(123)
+        console.log(res);
+      })
       this.pictureInfo.userId = this.user.id
-      console.log(this.pictureInfo)
+      // console.log(this.pictureInfo)
       pictureApi.addNewPicter(this.pictureInfo)
         .then(response => {
           // console.log(response.data.data.flag)

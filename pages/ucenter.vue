@@ -57,7 +57,7 @@
       <el-table-column prop="gmtModified" label="修改时间" />
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
-          <router-link :to="'/article/'+scope.row.id" style="padding-right: 5px">
+          <router-link :to="'/editArticle/'+scope.row.id" style="padding-right: 5px">
             <el-button type="primary" size="mini" icon="el-icon-edit">修改</el-button>
           </router-link>
           <el-button type="danger" size="mini" icon="el-icon-delete" @click="removeArticleById(scope.row.id)">删除</el-button>

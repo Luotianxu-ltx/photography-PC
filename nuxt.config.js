@@ -2,6 +2,7 @@ module.exports = {
   plugins: [
     { src: '~/plugins/nuxt-swiper-plugin.js', ssr: false },
     { src: "~plugins/vue-quill-editor.js", ssr: false },
+    { src: "~plugins/exif.js", ssr: false}
   ],
 
   css: [

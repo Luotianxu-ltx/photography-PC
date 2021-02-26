@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="新增照片">
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="照片加载更多，课程详情修改">
+      <change afterPath="$PROJECT_DIR$/plugins/exif.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/course.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/picture.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/picture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/article/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/course/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/course/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/photographer/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/photographer/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/picture/addPicture.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/addPicture.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/picture/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -159,7 +157,7 @@
       <workItem from="1614133811402" duration="1085000" />
       <workItem from="1614147261781" duration="12258000" />
       <workItem from="1614233868180" duration="8078000" />
-      <workItem from="1614300834689" duration="6927000" />
+      <workItem from="1614300834689" duration="15743000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -371,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614245629181</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="照片加载更多，课程详情修改">
+      <created>1614309169810</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1614309169810</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -455,6 +460,7 @@
     <MESSAGE value="图片高度" />
     <MESSAGE value="用户修改" />
     <MESSAGE value="新增照片" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增照片" />
+    <MESSAGE value="照片加载更多，课程详情修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="照片加载更多，课程详情修改" />
   </component>
 </project>
