@@ -76,21 +76,35 @@ export default {
 
     //注册提交的方法
     submitRegister() {
-      registerApi.registerUser(this.params)
-        .then(response => {
-          //提示注册成功
-          this.$message({
-            type: 'success',
-            message: "注册成功"
-          })
-          //跳转登录页面
-          this.$router.push({path:'/login'})
-
-        })
+      this.$refs['userForm'].validate((valid) => {
+        if (valid) {
+          registerApi.registerUser(this.params)
+            .then(response => {
+              console.log(response.data.data.flag)
+              //提示注册成功
+              console.log(response.data.code)
+              if (response.data.code == 20000) {
+                this.$message({
+                  type: 'success',
+                  message: "注册成功"
+                })
+                //跳转登录页面
+                this.$router.push({path:'/login'})
+              } else if (response.data.code == 20001) {
+                this.$message({
+                  type: 'error',
+                  message: response.data.message
+                })
+              }
+            })
+        } else {
+          console.log('注册失败');
+          return false;
+        }
+      });
     },
 
     checkPhone (rule, value, callback) {
-      //debugger
       if (!(/^1[34578]\d{9}$/.test(value))) {
         return callback(new Error('手机号码格式不正确'))
       }

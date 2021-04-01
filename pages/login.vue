@@ -66,33 +66,38 @@ export default {
   methods: {
     //登录的方法
     submitLogin() {
-      //第一步 调用接口进行登录，返回token字符串
-      loginApi.login(this.user)
-        .then(response => {
-          // console.log(response.data.code)
-          if(response.data.code !== 20000){
-            this.$message({
-              type: 'warning',
-              message: response.data.message
+      this.$refs['userForm'].validate((valid) => {
+        if (valid) {
+          //第一步 调用接口进行登录，返回token字符串
+          loginApi.login(this.user)
+            .then(response => {
+              // console.log(response.data.code)
+              if(response.data.code !== 20000){
+                this.$message({
+                  type: 'warning',
+                  message: response.data.message
+                })
+              } else {
+                // console.log(response.data.data.token)
+                //第二步 获取token字符串放到cookie里面
+                //第一个参数cookie名称，第二个参数值，第三个参数作用范围
+                cookie.set('photography_token',response.data.data.token,{domain: 'localhost'})
+                //第四步 调用接口 根据token获取用户信息，为了首页面显示
+                loginApi.getUserInfo()
+                  .then(response => {
+                    this.loginInfo = response.data.data.userInfo
+                    //获取返回用户信息，放到cookie里面
+                    cookie.set('photography_user',this.loginInfo,{domain: 'localhost'})
+                    //跳转页面
+                    window.location.href = "/";
+                  })
+              }
             })
-          } else {
-            // console.log(response.data.data.token)
-            //第二步 获取token字符串放到cookie里面
-            //第一个参数cookie名称，第二个参数值，第三个参数作用范围
-            cookie.set('photography_token',response.data.data.token,{domain: 'localhost'})
-            //第四步 调用接口 根据token获取用户信息，为了首页面显示
-            loginApi.getUserInfo()
-              .then(response => {
-                this.loginInfo = response.data.data.userInfo
-                //获取返回用户信息，放到cookie里面
-                cookie.set('photography_user',this.loginInfo,{domain: 'localhost'})
-                //跳转页面
-                window.location.href = "/";
-              })
-          }
-
-
-        })
+        } else {
+          console.log('登录失败!!');
+          return false;
+        }
+      });
     },
     checkPhone (rule, value, callback) {
       if (!(/^1[34578]\d{9}$/.test(value))) {
