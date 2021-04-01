@@ -1,8 +1,8 @@
 <template xmlns:id="http://www.w3.org/1999/xhtml">
   <div>
     <div class="articleInfo">
-      <el-form :model="pictureInfo" :rules="rules">
-        <el-form-item prop="title">
+      <el-form :model="pictureInfo" :rules="rules" label-width="120px">
+        <el-form-item prop="title" label="照片标题">
           <el-input type="text" placeholder="照片标题" v-model="pictureInfo.title"></el-input>
         </el-form-item>
 
