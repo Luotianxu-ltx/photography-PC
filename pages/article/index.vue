@@ -127,7 +127,7 @@ textarea {
 
 .w1100 {
   width: 1100px;
-  height: 935px;
+  height: 770px;
   margin: 0 auto;
 }
 

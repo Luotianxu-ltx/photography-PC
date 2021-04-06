@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="轮播图样式">
+    <list default="true" id="b9e1b7f3-a370-4257-81cb-20c738133a0f" name="默认的" comment="登录和注册页面表单验证">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/article/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/picture/addPicture.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/addPicture.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/picture/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/picture/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +162,8 @@
       <workItem from="1616509918176" duration="1086000" />
       <workItem from="1616832503649" duration="673000" />
       <workItem from="1616892620228" duration="1893000" />
-      <workItem from="1617279283713" duration="2289000" />
+      <workItem from="1617279283713" duration="3056000" />
+      <workItem from="1617715510042" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="首页信息">
       <created>1608995527771</created>
@@ -394,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617280743917</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="登录和注册页面表单验证">
+      <created>1617281748733</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1617281748733</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +463,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="用户登录退出实现" />
     <MESSAGE value="摄影师列表页面和课程列表页面" />
     <MESSAGE value="视频播放实现" />
     <MESSAGE value="课程支付前端" />
@@ -479,6 +487,7 @@
     <MESSAGE value="照片加载更多，课程详情修改" />
     <MESSAGE value="修改文章与查看文章页面修改" />
     <MESSAGE value="轮播图样式" />
-    <option name="LAST_COMMIT_MESSAGE" value="轮播图样式" />
+    <MESSAGE value="登录和注册页面表单验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录和注册页面表单验证" />
   </component>
 </project>

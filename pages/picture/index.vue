@@ -137,7 +137,7 @@ export default {
       })
     },
     getList() {
-      pictureApi.getPictureList(this.current,8,this.searchObj)
+      pictureApi.getPictureList(this.current,16,this.searchObj)
         .then(response => {
           this.before = response.data.data.list
           this.data = this.before

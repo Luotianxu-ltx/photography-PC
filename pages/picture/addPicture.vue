@@ -190,6 +190,7 @@ export default {
 }
 .articleInfo {
   width: 1100px;
+  height: 511px;
   margin: 0 auto;
   padding: 10px;
 }
