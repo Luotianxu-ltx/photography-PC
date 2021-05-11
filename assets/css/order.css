@@ -1,4 +1,5 @@
-.Confirm {}
+.Confirm {
+}
 
 .Confirm .Title, .Cart .Title {
   padding: 30px;
@@ -174,7 +175,7 @@
   margin-top: 24px;
 }
 
-.Finish>button {
+.Finish > button {
   width: 170px;
   height: 70px;
   line-height: 1;
@@ -182,7 +183,7 @@
   border-radius: 0;
 }
 
-.Finish>button.disabled {
+.Finish > button.disabled {
   background-color: #999;
 }
 
@@ -245,7 +246,8 @@
   display: none;
 }
 
-.Classes {}
+.Classes {
+}
 
 .Classes dt {
   padding: 0px 10px;
@@ -268,7 +270,8 @@
   padding-bottom: 6px;
 }
 
-.Classes dd {}
+.Classes dd {
+}
 
 .Classes dd ul {
   display: none;
@@ -365,21 +368,21 @@
 
 }
 
-.Classes dd ul .weijob .info .lb{
+.Classes dd ul .weijob .info .lb {
   color: #777986;
 }
 
-.Classes dd ul .weijob .info .lb .lesson{
+.Classes dd ul .weijob .info .lb .lesson {
   float: left;
   margin-right: 18px;
-  
+
 }
 
-.Classes dd ul .weijob .info .lb .personNum{
+.Classes dd ul .weijob .info .lb .personNum {
   float: left;
 }
 
-.Classes dd ul .weijob .info .lb .personNum:before{
+.Classes dd ul .weijob .info .lb .personNum:before {
   content: '';
   background-image: url(/edu/center/images/car_rec/i_per.png);
   vertical-align: middle;
@@ -391,7 +394,7 @@
   margin-right: 3px;
 }
 
-.Classes dd ul .weijob .info .money{
+.Classes dd ul .weijob .info .money {
   color: #777986;
 }
 
